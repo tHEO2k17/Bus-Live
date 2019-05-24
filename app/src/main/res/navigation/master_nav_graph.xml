@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/master_nav_graph"
+            app:startDestination="@id/splashScreenFragment">
+
+    <fragment android:id="@+id/welcomeScreenFragment"
+              android:name="com.example.buslive.view.ui.WelcomeScreenFragment"
+              android:label="fragment_welcome_screen"
+              tools:layout="@layout/fragment_welcome_screen">
+        <action
+                android:id="@+id/action_welcomeScreenFragment_to_loginFragment"
+                app:destination="@id/loginFragment"/>
+        <action android:id="@+id/action_welcomeScreenFragment_to_registration_process"
+                app:destination="@id/registration_process"/>
+    </fragment>
+    <fragment
+            android:id="@+id/splashScreenFragment"
+            android:name="com.example.buslive.view.ui.SplashScreenFragment"
+            android:label="fragment_splash_screen"
+            tools:layout="@layout/fragment_splash_screen">
+        <action android:id="@+id/action_splashScreenFragment_to_welcomeScreenFragment"
+                app:destination="@id/welcomeScreenFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@id/splashScreenFragment"
+                app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:id="@+id/loginFragment" android:name="com.example.buslive.view.ui.onboarding.login.LoginFragment"
+              android:label="fragment_login" tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_loginFragment_to_mainFragment" app:destination="@id/mainFragment"/>
+    </fragment>
+    <navigation android:id="@+id/registration_process" app:startDestination="@id/enterPhoneNumber">
+        <fragment android:id="@+id/enterOTPCode" android:name="com.example.buslive.view.ui.onboarding.register.EnterOTPCode"
+                  android:label="fragment_enter_otpcode" tools:layout="@layout/fragment_enter_otpcode">
+            <action android:id="@+id/action_enterOTPCode_to_enterDetailsFragment"
+                    app:destination="@id/enterDetailsFragment"/>
+        </fragment>
+        <fragment android:id="@+id/enterDetailsFragment" android:name="com.example.buslive.view.ui.onboarding.register.EnterDetailsFragment"
+                  android:label="fragment_enter_details" tools:layout="@layout/fragment_enter_details"/>
+        <fragment android:id="@+id/enterPhoneNumber" android:name="com.example.buslive.view.ui.onboarding.register.EnterPhoneNumber"
+                  android:label="fragment_enter_phone_number" tools:layout="@layout/fragment_enter_phone_number">
+            <action android:id="@+id/action_enterPhoneNumber_to_enterOTPCode" app:destination="@id/enterOTPCode"/>
+        </fragment>
+        <action android:id="@+id/action_global_mainFragment" app:destination="@id/mainFragment"/>
+    </navigation>
+    <fragment android:id="@+id/mainFragment" android:name="com.example.buslive.view.ui.MainFragment"
+              android:label="fragment_main" tools:layout="@layout/fragment_main"/>
+</navigation>

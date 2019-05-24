@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BusLive</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bus_live_text">BUS LIVE</string>
+    <string name="login_instructions">Enter your credentials and click the login button to continue</string>
+    <string name="enter_number_ins">We need your phone number to verify your account and to be able to get in touch</string>
+    <string name="otp_ins">Check your SMS messages. We’ve sent a confirmation PIN to +233 000 000 000</string>
+</resources>
