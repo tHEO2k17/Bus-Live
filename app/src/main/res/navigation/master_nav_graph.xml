@@ -3,20 +3,9 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/master_nav_graph"
             app:startDestination="@id/splashScreenFragment">
-
-    <fragment android:id="@+id/welcomeScreenFragment"
-              android:name="com.example.buslive.view.ui.WelcomeScreenFragment"
-              android:label="fragment_welcome_screen"
-              tools:layout="@layout/fragment_welcome_screen">
-        <action
-                android:id="@+id/action_welcomeScreenFragment_to_loginFragment"
-                app:destination="@id/loginFragment"/>
-        <action android:id="@+id/action_welcomeScreenFragment_to_registration_process"
-                app:destination="@id/registration_process"/>
-    </fragment>
     <fragment
             android:id="@+id/splashScreenFragment"
-            android:name="com.example.buslive.view.ui.SplashScreenFragment"
+            android:name="com.example.buslive.view.shared.SplashScreenFragment"
             android:label="fragment_splash_screen"
             tools:layout="@layout/fragment_splash_screen">
         <action android:id="@+id/action_splashScreenFragment_to_welcomeScreenFragment"
@@ -25,6 +14,18 @@
                 app:popUpTo="@id/splashScreenFragment"
                 app:popUpToInclusive="true"/>
     </fragment>
+
+    <fragment android:id="@+id/welcomeScreenFragment"
+              android:name="com.example.buslive.view.ui.onboarding.WelcomeScreenFragment"
+              android:label="fragment_welcome_screen"
+              tools:layout="@layout/fragment_welcome_screen">
+        <action
+                android:id="@+id/action_welcomeScreenFragment_to_loginFragment"
+                app:destination="@id/loginFragment"/>
+        <action android:id="@+id/action_welcomeScreenFragment_to_registration_process"
+                app:destination="@id/registration_process"/>
+    </fragment>
+
     <fragment android:id="@+id/loginFragment" android:name="com.example.buslive.view.ui.onboarding.login.LoginFragment"
               android:label="fragment_login" tools:layout="@layout/fragment_login">
         <action android:id="@+id/action_loginFragment_to_mainFragment" app:destination="@id/mainFragment"/>
@@ -41,8 +42,18 @@
                   android:label="fragment_enter_phone_number" tools:layout="@layout/fragment_enter_phone_number">
             <action android:id="@+id/action_enterPhoneNumber_to_enterOTPCode" app:destination="@id/enterOTPCode"/>
         </fragment>
-        <action android:id="@+id/action_global_mainFragment" app:destination="@id/mainFragment"/>
+        <action android:id="@+id/action_global_pendingScreenFragment" app:destination="@id/pendingScreenFragment"/>
     </navigation>
-    <fragment android:id="@+id/mainFragment" android:name="com.example.buslive.view.ui.MainFragment"
+
+    <fragment android:id="@+id/pendingScreenFragment" android:name="com.example.buslive.view.shared.PendingScreenFragment"
+              android:label="fragment_pending_screen" tools:layout="@layout/fragment_pending_screen">
+        <action android:id="@+id/action_pendingScreenFragment_to_mainFragment"
+                app:destination="@id/mainFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@id/master_nav_graph"
+                app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/mainFragment" android:name="com.example.buslive.view.ui.main.MainFragment"
               android:label="fragment_main" tools:layout="@layout/fragment_main"/>
 </navigation>

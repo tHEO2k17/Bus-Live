@@ -1,4 +1,4 @@
-package com.example.buslive.view.ui
+package com.example.buslive.view.shared
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

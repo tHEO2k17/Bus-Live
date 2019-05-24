@@ -1,4 +1,4 @@
-package com.example.buslive.view.ui
+package com.example.buslive.view.ui.onboarding
 
 import android.content.Context
 import android.net.Uri
