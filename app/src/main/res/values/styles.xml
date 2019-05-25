@@ -66,4 +66,17 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextInputLayoutWithPrimaryColor" parent="Widget.Design.TextInputLayout">
+        <item name="colorControlNormal">#00FFFFFF</item>
+        <item name="colorControlActivated">#00FFFFFF</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_drawable</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+    </style>
+
+
 </resources>

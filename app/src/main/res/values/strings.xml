@@ -9,4 +9,7 @@
     </string>
     <string name="otp_ins">Check your SMS messages. We’ve sent a confirmation PIN to +233 000 000 000</string>
     <string name="congrats_text">Enjoy your stay and the best \nof service</string>
+    <string name="departure_txt">Departure</string>
+    <string name="arrival_txt">Arrival</string>
+    <string name="journey_date_txt">Journey Date</string>
 </resources>

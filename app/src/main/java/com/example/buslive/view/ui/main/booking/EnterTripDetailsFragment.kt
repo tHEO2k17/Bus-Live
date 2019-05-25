@@ -6,26 +6,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import butterknife.ButterKnife
+import butterknife.OnClick
 import com.example.buslive.R
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class EnterTripDetailsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_enter_trip_details, container, false)
+        val v = inflater.inflate(R.layout.fragment_enter_trip_details, container, false)
+        ButterKnife.bind(this, v)
+        return v
+    }
+
+    @OnClick(R.id.btn_search)
+    fun onSearchBus() {
+        findNavController().navigate(R.id.action_enterTripDetailsFragment_to_availableBusesFragment)
     }
 
 

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -41,6 +42,14 @@ class MainFragment : Fragment() {
     private fun init() {
         initToolbar()
         initBottomNavigation()
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+           mBottomNavigationView.visibility = when (destination.id) {
+                R.id.enterTripDetailsFragment -> View.VISIBLE
+                R.id.tripListFragment -> View.VISIBLE
+                R.id.accountSettingsFragment -> View.VISIBLE
+                else -> View.GONE
+            }
+        }
     }
 
     private fun initToolbar() {
@@ -50,6 +59,5 @@ class MainFragment : Fragment() {
     private fun initBottomNavigation() {
         mBottomNavigationView.setupWithNavController(navController)
     }
-
 
 }
