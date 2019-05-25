@@ -9,6 +9,8 @@ import androidx.appcompat.app.AlertDialog
 import com.example.buslive.R
 import com.example.buslive.data.model.response.AvailableBusesResponse
 import com.example.buslive.util.toCurrency
+import com.example.buslive.util.toDate
+import com.example.buslive.util.toTime
 
 class ModalDialog(val context: Context) {
 
@@ -23,14 +25,15 @@ class ModalDialog(val context: Context) {
         dialogView = LayoutInflater.from(context).inflate(R.layout.layout_summary_page, null, false)
         dialogView.apply {
             findViewById<TextView>(R.id.tv_bus_name).text = data.name
-            findViewById<TextView>(R.id.tv_travel_date).text = data.departure.date
+            findViewById<TextView>(R.id.tv_travel_date).text = data.departure.date.toDate()
             findViewById<TextView>(R.id.tv_departure).text = data.departure.location
-            findViewById<TextView>(R.id.tv_departure_time).text = data.departure.date
+            findViewById<TextView>(R.id.tv_departure_time).text = data.departure.date.toTime()
             findViewById<TextView>(R.id.tv_departure_terminal).text = data.terminal
             findViewById<TextView>(R.id.tv_arrival).text = data.arrival.location
-            findViewById<TextView>(R.id.tv_arrival_time).text = data.arrival.date
+            findViewById<TextView>(R.id.tv_arrival_time).text = data.arrival.date.toTime()
             findViewById<TextView>(R.id.tv_arrival_location).text = data.arrival.location
             findViewById<TextView>(R.id.tv_fare).text = data.fare.toCurrency()
+            findViewById<TextView>(R.id.tv_duration).text = "4 Hours"
             findViewById<ImageButton>(R.id.img_close).setOnClickListener {
                 dismiss()
             }

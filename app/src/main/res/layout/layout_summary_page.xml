@@ -21,7 +21,6 @@
 
             <TextView
                     android:id="@+id/tv_bus_name"
-                    android:text="Jeon VVIP"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
@@ -30,7 +29,6 @@
 
             <TextView
                     android:id="@+id/tv_travel_date"
-                    android:text="25th May, 2019"
                     android:textSize="12sp"
                     android:textColor="@color/colorAccent"
                     android:layout_width="wrap_content"
@@ -50,15 +48,14 @@
     <View
             android:layout_width="match_parent"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="30dp"
             android:layout_height=".5dp"
-            android:background="@color/colorAccent"/>
+            android:background="@color/colorLightGrey"/>
 
     <TextView
             android:id="@+id/tv_departure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Takoradi"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
@@ -67,23 +64,22 @@
             android:id="@+id/tv_departure_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="12sp"
             android:drawableStart="@drawable/ic_dot"
-            android:drawablePadding="10dp"
-            android:text="4:30pm"/>
+            android:drawablePadding="10dp"/>
 
     <TextView
             android:id="@+id/tv_departure_terminal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="15dp"
-            android:text="Komfo Eku Terminal"
+            android:textSize="12sp"
+            android:paddingLeft="15dp"
             android:layout_marginBottom="30dp"/>
 
     <TextView
             android:id="@+id/tv_arrival"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Accra"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
@@ -92,23 +88,22 @@
             android:id="@+id/tv_arrival_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="12sp"
             android:drawableStart="@drawable/ic_dot"
-            android:drawablePadding="10dp"
-            android:text="4:30pm"/>
+            android:drawablePadding="10dp"/>
 
     <TextView
             android:id="@+id/tv_arrival_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="12sp"
             android:paddingStart="15dp"
-            android:text="Kaneshie Station"
             android:layout_marginBottom="32dp"/>
 
     <TextView
             android:id="@+id/tv_fare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GHS 38.00"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
@@ -129,7 +124,6 @@
                 android:id="@+id/tv_duration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4 Hours"
                 android:textSize="12sp"
                 android:textColor="@color/colorAccent"/>
     </LinearLayout>
