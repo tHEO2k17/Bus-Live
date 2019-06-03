@@ -1,11 +1,14 @@
 package com.example.buslive.view.shared
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import butterknife.BindView
 import com.example.buslive.R
 import com.example.buslive.data.model.response.AvailableBusesResponse
 import com.example.buslive.util.toCurrency
@@ -20,7 +23,9 @@ class ModalDialog(val context: Context) {
     private lateinit var dialog: AlertDialog
     private lateinit var dialogView: View
 
-    fun showSummary(data: AvailableBusesResponse) {
+
+    @SuppressLint("SetTextI18n", "InflateParams")
+    fun showSummary(data: AvailableBusesResponse, payNowClick:  View.OnClickListener) {
 
         dialogView = LayoutInflater.from(context).inflate(R.layout.layout_summary_page, null, false)
         dialogView.apply {
@@ -37,6 +42,8 @@ class ModalDialog(val context: Context) {
             findViewById<ImageButton>(R.id.img_close).setOnClickListener {
                 dismiss()
             }
+            findViewById<Button>(R.id.btn_buy_ticket).setOnClickListener(payNowClick)
+
         }
 
         dialogBuilder

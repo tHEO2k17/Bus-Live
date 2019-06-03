@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".view.shared.TripDetailsFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".view.shared.TripDetailsFragment"
+              android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:id="@+id/tv_confirmed_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmed_date_mon_25th_may_2019"
+            android:layout_margin="16dp"/>
 
-</FrameLayout>
+    <LinearLayout
+            android:background="@color/colorWhite"
+            android:layout_below="@+id/tv_confirmed_date"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TableRow>
+                <TextView android:text="From"/>
+                <TextView android:text="From"/>
+                <TextView android:text="To"/>
+                <TextView android:text="From"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

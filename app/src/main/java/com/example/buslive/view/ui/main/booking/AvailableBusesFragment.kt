@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import butterknife.BindView
@@ -65,8 +66,10 @@ class AvailableBusesFragment : Fragment() {
                 setOnBusSelectedListener(object : AvailableBusesAdapter.OnBusSelected {
                     override fun onBusSelected(selectedBus: AvailableBusesResponse) {
                         val dialog = ModalDialog(context)
-                        dialog.showSummary(selectedBus)
-//                        Toast.makeText(context, "$selectedBus", Toast.LENGTH_LONG).show()
+                        dialog.showSummary(selectedBus, View.OnClickListener {
+                            dialog.dismiss()
+                            findNavController().navigate(R.id.action_availableBusesFragment_to_tripDetailsFragment)
+                        })
 
                     }
                 })

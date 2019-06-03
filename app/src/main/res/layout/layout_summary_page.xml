@@ -41,7 +41,8 @@
                 android:layout_weight=".5"
                 android:background="@color/colorWhite"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_close"/>
+                app:srcCompat="@drawable/ic_close"
+                android:contentDescription="@string/todo"/>
 
     </LinearLayout>
 
