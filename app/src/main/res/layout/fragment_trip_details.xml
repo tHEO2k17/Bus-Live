@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              tools:context=".view.shared.TripDetailsFragment"
-              android:orientation="vertical">
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                tools:context=".view.shared.TripDetailsFragment"
+                android:orientation="vertical">
 
     <TextView
             android:id="@+id/tv_confirmed_date"
@@ -22,16 +22,173 @@
 
         <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
             <TableRow>
-                <TextView android:text="From"/>
-                <TextView android:text="From"/>
-                <TextView android:text="To"/>
-                <TextView android:text="From"/>
+                <LinearLayout android:orientation="horizontal"
+                              android:padding="16dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorLightGrey"
+                            android:text="From"
+                            android:layout_marginEnd="5dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Takoradi"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_column="2"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="end">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorLightGrey"
+                            android:text="To"
+                            android:layout_marginEnd="5dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Accra"/>
+                </LinearLayout>
             </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_height=".5dp"
+                    android:background="@color/colorLightGrey"/>
+            <TableRow>
+                <LinearLayout android:orientation="vertical"
+                              android:padding="16dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorLightGrey"
+                            android:text="Bus Name"
+                            android:layout_marginEnd="5dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Jeon VVIP"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="end">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorLightGrey"
+                            android:text="Boarding Time"
+                            android:layout_marginEnd="5dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="5:45pm"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout android:orientation="vertical"
+                              android:padding="16dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorLightGrey"
+                            android:text="Ticket Number"
+                            android:layout_marginEnd="5dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="VVIP0001"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="end">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorLightGrey"
+                            android:text="Seat Number"
+                            android:layout_marginEnd="5dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="11"/>
+                </LinearLayout>
+            </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height=".5dp"
+                    android:background="@color/colorLightGrey"/>
+            <TableRow>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_margin="16dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Jersey Jay"/>
 
+                <LinearLayout
+                        android:layout_column="2"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="end">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorLightGrey"
+                            android:text="Total Fare"
+                            android:layout_marginEnd="5dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="GHS38.00"/>
+                </LinearLayout>
+            </TableRow>
         </TableLayout>
 
+        <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo"/>
 
     </LinearLayout>
 </RelativeLayout>

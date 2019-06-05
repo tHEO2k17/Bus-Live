@@ -30,9 +30,11 @@
                 style="@style/TextInputLayoutAppearance">
 
             <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_full_name"
                     android:textColor="@color/colorWhite"
                     android:layout_width="match_parent"
                     android:hint="Full name"
+                    android:inputType="textPersonName"
                     android:focusable="true"
                     android:backgroundTint="@color/colorAccent"
                     android:layout_height="wrap_content"/>
@@ -44,9 +46,11 @@
                 style="@style/TextInputLayoutAppearance">
 
             <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_email"
                     android:textColor="@color/colorWhite"
                     android:layout_width="match_parent"
                     android:hint="Email (optional)"
+                    android:inputType="textEmailAddress"
                     android:focusable="true"
                     android:backgroundTint="@color/colorAccent"
                     android:layout_height="wrap_content"/>
@@ -55,12 +59,15 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/TextInputLayoutAppearance">
+                style="@style/TextInputLayoutAppearance"
+                app:passwordToggleEnabled="true">
 
             <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_password"
                     android:textColor="@color/colorWhite"
                     android:layout_width="match_parent"
                     android:hint="Choose a password"
+                    android:inputType="textPassword"
                     android:focusable="true"
                     android:backgroundTint="@color/colorAccent"
                     android:layout_height="wrap_content"/>
@@ -72,9 +79,11 @@
                 style="@style/TextInputLayoutAppearance">
 
             <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_confirm_password"
                     android:textColor="@color/colorWhite"
                     android:layout_width="match_parent"
                     android:hint="Confirm password"
+                    android:inputType="textPassword"
                     android:focusable="true"
                     android:backgroundTint="@color/colorAccent"
                     android:layout_height="wrap_content"/>

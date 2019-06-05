@@ -15,9 +15,7 @@ class LoginFragment : Fragment() {
 
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_login, container, false)
-
          ButterKnife.bind(this, v)
-
         return v
     }
 

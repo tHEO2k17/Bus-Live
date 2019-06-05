@@ -39,6 +39,7 @@
                 app:viewType="rectangle"/>
 
         <TextView
+                android:id="@+id/tv_ins"
                 android:layout_marginTop="10dp"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"

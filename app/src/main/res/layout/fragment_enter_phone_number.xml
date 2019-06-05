@@ -30,11 +30,13 @@
                 style="@style/TextInputLayoutAppearance">
 
             <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_phone"
                     android:textColor="@color/colorWhite"
                     android:layout_width="match_parent"
                     android:hint="Phone Number"
                     android:focusable="true"
                     android:backgroundTint="@color/colorAccent"
+                    android:inputType="phone"
                     android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
